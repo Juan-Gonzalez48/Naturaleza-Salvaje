@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Naturaleza Salvaje | Jabberwock</title>
+    <link rel="icon" type="image/jpeg" href="Naturaleza Salvaje.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Cursor personalizado -->
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<header>
+    <div class="container nav-container">
+        <div class="logo-wrapper" data-aos="fade-right">
+            <img src="foto1.jpg.jpeg" alt="Naturaleza Salvaje" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-main">Naturaleza Salvaje</span>
+                <span class="brand-sub">Por jabberwock</span>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio" class="active-nav">INICIO</a></li>
+                <li><a href="#nosotros">NOSOTROS</a></li>
+                <li><a href="#catalogo">CATÁLOGO</a></li>
+                <li><a href="#vida-util">VIDA ÚTIL</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ul>
+            <div class="cart-icon" id="cartIcon">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cartCount" class="cart-count">0</span>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content" data-aos="fade-up" data-aos-duration="1500">
+        <span class="hero-tag">COSMÉTICA ARTESANAL</span>
+        <h1>Naturaleza Salvaje</h1>
+        <p>Del corazón de la naturaleza a tu piel.<br>Ingredientes puros, fórmulas honestas.</p>
+        <div class="hero-buttons">
+            <a href="#catalogo" class="btn btn-primary pulse"><i class="fas fa-leaf"></i> VER CATÁLOGO</a>
+            <a href="#nosotros" class="btn btn-secondary"><i class="fas fa-heart"></i> NUESTRA HISTORIA</a>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <span>Desliza</span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<!-- Nosotros -->
+<section id="nosotros" class="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text" data-aos="fade-right">
+                <h2>Nuestra esencia</h2>
+                <p>Creemos en la belleza desde lo natural y el poder que la naturaleza tiene sobre nuestras vidas. Por esta razón, aquí solo encontrarás productos para tu cuidado personal <strong>100% naturales</strong> y libres de preservantes, elaborados de manera artesanal con ingredientes puros. Libres de crueldad animal y químicos agresivos.</p>
+                <div class="signature">Naturaleza Salvaje</div>
+            </div>
+            <div class="about-stats" data-aos="fade-left">
+                <div class="stat">
+                    <div class="stat-number" id="yearsCount"></div>
+                    <div class="stat-label"></div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="productsCount"></div>
+                    <div class="stat-label"></div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="customersCount"></div>
+                    <div class="stat-label"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Catálogo -->
+<section id="catalogo" class="catalog">
+    <div class="container">
+        <h2 data-aos="fade-up">Nuestros productos</h2>
+        <div class="filter-section" id="filterContainer" data-aos="fade-up">
+            <button class="filter-btn active" data-category="all"><i class="fas fa-seedling"></i> Todos</button>
+            <button class="filter-btn" data-category="facial"><i class="fas fa-smile"></i> Facial</button>
+            <button class="filter-btn" data-category="capilar"><i class="fas fa-hand-holding-heart"></i> Capilar</button>
+            <button class="filter-btn" data-category="corporal"><i class="fas fa-pump-soap"></i> Corporal</button>
+            <button class="filter-btn" data-category="labios-cejas"><i class="fas fa-lipstick"></i> Labios & Cejas</button>
+            <button class="filter-btn" data-category="mascotas"><i class="fas fa-dog"></i> Mascotas</button>
+        </div>
+        <div id="productsGrid" class="products-grid"></div>
+    </div>
+</section>
+
+<!-- Vida útil -->
+<section id="vida-util" class="shelf-life">
+    <div class="container">
+        <h2 data-aos="fade-up">📅 Vida útil de los productos</h2>
+        <p class="section-subtitle" data-aos="fade-up">Transparencia y calidad en cada detalle</p>
+        <div class="shelf-grid" data-aos="fade-up">
+            <div class="shelf-card">
+                <div class="shelf-icon"><i class="fas fa-calendar-alt"></i><span class="shelf-months">24</span></div>
+                <h3>24 MESES</h3>
+                <ul>
+                    <li><i class="fas fa-oil-can"></i> Aceite de Coco Extra Virgen</li>
+                    <li><i class="fas fa-seedling"></i> Aceite de Almendras Dulce</li>
+                    <li><i class="fas fa-tree"></i> Aceite de Argán Puro</li>
+                    <li><i class="fas fa-capsules"></i> Biotina</li>
+                </ul>
+            </div>
+            <div class="shelf-card">
+                <div class="shelf-icon"><i class="fas fa-calendar-alt"></i><span class="shelf-months">12</span></div>
+                <h3>12 MESES</h3>
+                <ul>
+                    <li><i class="fas fa-tint"></i> Agua de Rosas</li>
+                    <li><i class="fas fa-grain"></i> Tónico de Arroz</li>
+                    <li><i class="fas fa-hand-holding-heart"></i> Tónico Capilar</li>
+                    <li><i class="fas fa-mask"></i> Arcillas Faciales</li>
+                    <li><i class="fas fa-leaf"></i> Serum Facial de Aloe Vera</li>
+                    <li><i class="fas fa-soap"></i> Jabones Faciales</li>
+                    <li><i class="fas fa-chocolate-bar"></i> Chocolaterapia</li>
+                </ul>
+            </div>
+            <div class="shelf-card">
+                <div class="shelf-icon"><i class="fas fa-calendar-alt"></i><span class="shelf-months">18</span></div>
+                <h3>18 MESES</h3>
+                <ul>
+                    <li><i class="fas fa-lipstick"></i> Bálsamo Labial</li>
+                    <li><i class="fas fa-eye"></i> Bálsamo de Cejas</li>
+                    <li><i class="fas fa-scrub"></i> Body Scrub</li>
+                    <li><i class="fas fa-clock"></i> Serum Antiedad</li>
+                    <li><i class="fas fa-apple-alt"></i> Vitamina C</li>
+                    <li><i class="fas fa-kiss"></i> Exfoliante Labial</li>
+                    <li><i class="fas fa-shampoo"></i> Shampoo</li>
+                    <li><i class="fas fa-hand-peace"></i> Acondicionador</li>
+                    <li><i class="fas fa-sync-alt"></i> Repolarizador</li>
+                    <li><i class="fas fa-seedling"></i> Tratamiento de Aguacate</li>
+                    <li><i class="fas fa-onion"></i> Tratamiento de Cebolla</li>
+                </ul>
+            </div>
+        </div>
+        <div class="shelf-note" data-aos="fade-up">
+            <i class="fas fa-info-circle"></i>
+            <p><strong>NOTA:</strong> Este tiempo bajo un almacenamiento óptimo, protegidos de la luz directa y del calor excesivo.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonios -->
+<section class="testimonials">
+    <div class="container">
+        <h2 data-aos="fade-up">Lo que dicen nuestros clientes</h2>
+        <div class="swiper testimonial-swiper" data-aos="zoom-in">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide testimonial-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Los mejores productos naturales que he probado. Mi piel nunca había estado tan radiante."</p>
+                    <h4>— María González</h4>
+                </div>
+                <div class="swiper-slide testimonial-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"El aceite de argán salvó mi cabello. Servicio al cliente increíble. ¡Gracias!"</p>
+                    <h4>Carlos Méndez</h4>
+                </div>
+                <div class="swiper-slide testimonial-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Cruelty-free y natural. Veo a mi perrito comodo con el bálsamo para sus patitas. Excelente"</p>
+                    <h4>Valentina Ruiz</h4>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto" class="contact-section">
+    <div class="container contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+            <h2>Hablemos</h2>
+            <ul class="info-list">
+                <li><i class="fas fa-map-marker-alt"></i> <strong>UBICACIÓN</strong><br>Dosquebradas</li>
+                <li><i class="fab fa-whatsapp"></i> <strong>WHATSAPP</strong><br>
+                    <a href="https://wa.me/573214058442" target="_blank">321 4058442</a><br>
+                    <a href="https://wa.me/573008564851" target="_blank">300 8564851</a>
+                </li>
+                <li><i class="far fa-envelope"></i> <strong>EMAIL</strong><br>
+                    <a href="mailto:jabberwock432@gmail.com">jabberwock432@gmail.com</a>
+                </li>
+                <li><i class="fab fa-instagram"></i> <strong>INSTAGRAM</strong><br>
+                    <a href="https://instagram.com/jabberwock_official" target="_blank">@jabberwock_official</a>
+                </li>
+                <li><i class="fab fa-facebook-f"></i> <strong>FACEBOOK</strong><br>Próximamente</li>
+                <li><i class="fab fa-tiktok"></i> <strong>TIKTOK</strong><br>Próximamente</li>
+            </ul>
+        </div>
+        <div class="contact-form" data-aos="fade-left">
+            <h2>CONTÁCTANOS</h2>
+            <form id="contactForm">
+                <div class="input-group"><i class="fas fa-user"></i><input type="text" name="nombre" placeholder="Tu nombre" required></div>
+                <div class="input-group"><i class="fas fa-envelope"></i><input type="email" name="correo" placeholder="tu@correo.com" required></div>
+                <div class="input-group"><i class="fas fa-comment"></i><textarea name="mensaje" rows="4" placeholder="¿En qué te podemos ayudar?" required></textarea></div>
+                <button type="submit" class="btn btn-primary btn-block">Enviar mensaje <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container footer-inner">
+        <div class="footer-jabber"><i class="fas fa-leaf"></i> Naturaleza Salvaje · by Jabberwock</div>
+        <div class="footer-copy">© 2026 · Cuidado natural consciente</div>
+    </div>
+</footer>
+
+<a href="https://wa.me/573214058442" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<!-- Modal de opciones de producto (presentaciones) -->
+<div id="optionsModal" class="modal">
+    <div class="modal-content options-modal-content">
+        <span class="modal-close" id="closeOptionsModal">&times;</span>
+        <h3 id="optionsModalTitle">Selecciona presentación</h3>
+        <div id="optionsList" class="options-list"></div>
+    </div>
+</div>
+
+<!-- Modal de producto (detalle) -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" id="closeModalBtn">&times;</span>
+        <img id="modalImage" class="modal-img" src="" alt="Producto">
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-detail" id="modalDesc"></div>
+        <div class="modal-price" id="modalPrice"></div>
+    </div>
+</div>
+
+<div id="toast" class="toast">✨ Producto agregado</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
