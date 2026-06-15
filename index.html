@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>Naturaleza Salvaje | Jabberwock</title>
     <link rel="icon" type="image/jpeg" href="foto2.jpg.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,27 +15,16 @@
 </head>
 <body>
 
-<!-- Cursor personalizado -->
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
-
 <header>
     <div class="container nav-container">
-        <div class="logo-wrapper" data-aos="fade-right">
+        <div class="logo-wrapper">
             <img src="foto1.jpg.jpeg" alt="Naturaleza Salvaje" class="logo-img">
             <div class="logo-text">
                 <span class="brand-main">Naturaleza Salvaje</span>
-                <span class="brand-sub">Por jabberwock</span>
+                <span class="brand-sub">by jabberwock</span>
             </div>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#inicio" class="active-nav">INICIO</a></li>
-                <li><a href="#nosotros">NOSOTROS</a></li>
-                <li><a href="#catalogo">CATÁLOGO</a></li>
-                <li><a href="#vida-util">VIDA ÚTIL</a></li>
-                <li><a href="#contacto">CONTACTO</a></li>
-            </ul>
+        <div class="header-actions">
             <div class="cart-icon" id="cartIcon">
                 <i class="fas fa-shopping-bag"></i>
                 <span id="cartCount" class="cart-count">0</span>
@@ -43,20 +32,30 @@
             <div class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </div>
+        </div>
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#nosotros">NOSOTROS</a></li>
+                <li><a href="#catalogo">CATÁLOGO</a></li>
+                <li><a href="#vida-util">VIDA ÚTIL</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ul>
         </nav>
     </div>
 </header>
 
-<!-- Hero -->
+<!-- Hero con imagen de fondo natural -->
 <section id="inicio" class="hero">
     <div class="hero-overlay"></div>
-    <div class="container hero-content" data-aos="fade-up" data-aos-duration="1500">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
         <span class="hero-tag">COSMÉTICA ARTESANAL</span>
         <h1>Naturaleza Salvaje</h1>
         <p>Del corazón de la naturaleza a tu piel.<br>Ingredientes puros, fórmulas honestas.</p>
         <div class="hero-buttons">
-            <a href="#catalogo" class="btn btn-primary pulse"><i class="fas fa-leaf"></i> VER CATÁLOGO</a>
-            <a href="#nosotros" class="btn btn-secondary"><i class="fas fa-heart"></i> NUESTRA HISTORIA</a>
+            <a href="#catalogo" class="btn btn-primary">VER CATÁLOGO</a>
+            <a href="#nosotros" class="btn btn-secondary">NUESTRA HISTORIA</a>
         </div>
     </div>
     <div class="scroll-indicator">
@@ -65,10 +64,9 @@
     </div>
 </section>
 
-<!-- Sección Nuestra esencia (texto + imagen) -->
+<!-- Nuestra esencia -->
 <section id="nosotros" class="about">
     <div class="container">
-        <!-- Fila con texto e imagen -->
         <div class="about-row">
             <div class="about-text" data-aos="fade-right">
                 <h2>Nuestra esencia</h2>
@@ -76,10 +74,9 @@
                 <div class="signature">— Naturaleza Salvaje</div>
             </div>
             <div class="about-image" data-aos="fade-left">
-                <img src="foto1.jpg.jpeg" alt="Naturaleza Salvaje - Cosmética Natural" class="about-img">
+                <img src="foto1.jpg.jpeg" alt="Naturaleza Salvaje" class="about-img">
             </div>
         </div>
-        <!-- Fila con estadísticas (contadores) -->
         <div class="about-stats" data-aos="fade-up">
             <div class="stat">
                 <div class="stat-number" id="yearsCount">0</div>
@@ -102,12 +99,12 @@
     <div class="container">
         <h2 data-aos="fade-up">Nuestros productos</h2>
         <div class="filter-section" id="filterContainer" data-aos="fade-up">
-            <button class="filter-btn active" data-category="all"><i class="fas fa-seedling"></i> Todos</button>
-            <button class="filter-btn" data-category="facial"><i class="fas fa-smile"></i> Facial</button>
-            <button class="filter-btn" data-category="capilar"><i class="fas fa-hand-holding-heart"></i> Capilar</button>
-            <button class="filter-btn" data-category="corporal"><i class="fas fa-pump-soap"></i> Corporal</button>
-            <button class="filter-btn" data-category="labios-cejas"><i class="fas fa-lipstick"></i> Labios & Cejas</button>
-            <button class="filter-btn" data-category="mascotas"><i class="fas fa-dog"></i> Mascotas</button>
+            <button class="filter-btn active" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="facial">Facial</button>
+            <button class="filter-btn" data-category="capilar">Capilar</button>
+            <button class="filter-btn" data-category="corporal">Corporal</button>
+            <button class="filter-btn" data-category="labios-cejas">Labios & Cejas</button>
+            <button class="filter-btn" data-category="mascotas">Mascotas</button>
         </div>
         <div id="productsGrid" class="products-grid"></div>
     </div>
@@ -185,7 +182,7 @@
                 </div>
                 <div class="swiper-slide testimonial-card">
                     <i class="fas fa-quote-left"></i>
-                    <p>"Cruelty-free y natural. Veo a mi perrito comodo con el bálsamo para sus patitas. Excelente"</p>
+                    <p>"Cruelty-free y natural. Mi perrito ama el bálsamo para sus patitas. Excelente"</p>
                     <h4>Valentina Ruiz</h4>
                 </div>
             </div>
