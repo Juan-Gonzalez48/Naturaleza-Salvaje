@@ -183,9 +183,21 @@ const productosData = [
             { tamaño: "20 gr", precio: 7000, precioTexto: "$7.000" }
         ]
     },
-    // 15. Balsamo de cejas y pestañas
+    // 15. Balsamo Labial Chapstick
+    {
+        id: 15,
+        nombre: "Balsamo labial Chapstick",
+        categoria: "labios-cejas",
+        descripcion: "20 gr. Un bálsamo labial en formato chapstick que proporciona hidratación intensa y protección duradera para los labios secos y agrietados. Enriquecido con ingredientes naturales, este bálsamo nutre profundamente, suaviza y deja un brillo natural en los labios. Ideal para mantenerlos suaves y protegidos durante todo el día.",
+        descCorta: "Hidratación intensa, protección duradera, formato práctico.",
+        imagen: "Fotos/BalsamoLabial Chapstick.jpg.jpeg",
+        presentaciones: [
+            { tamaño: "20 gr", precio: 7000, precioTexto: "$7.000" }
+        ]
+    },
+    // 16. Balsamo de cejas y pestañas
     { 
-        id: 15, 
+        id: 16, 
         nombre: "Balsamo de cejas y pestañas", 
         categoria: "labios-cejas", 
         descripcion: "Un balsamo para cejas y pestañas que nutre y protege, mejorando su apariencia y salud. Rico en ingredientes naturales que fortalecen y estimulan el crecimiento. Ideal para mantener cejas y pestañas sanas y atractivas.",
@@ -195,9 +207,9 @@ const productosData = [
             { tamaño: "20 gr", precio: 8000, precioTexto: "$8.000" }
         ]
     },
-    // 16. Serum de pestañas
+    // 17. Serum de pestañas
     { 
-        id: 16, 
+        id: 17, 
         nombre: "Serum de pestañas", 
         categoria: "labios-cejas", 
         descripcion: "10 ml. Un serum específico para pestañas que fortalece, estimula el crecimiento y mejora la apariencia de las mismas. Rico en ingredientes naturales que nutren y protegen, proporcionando un resultado visible en poco tiempo.",
@@ -207,9 +219,9 @@ const productosData = [
             { tamaño: "10 ml", precio: 21000, precioTexto: "$21.000" }
         ]
     },
-    // 17. Arcilla detox con te verde
+    // 18. Arcilla detox con te verde
     { 
-        id: 17, 
+        id: 18, 
         nombre: "Arcilla detox con te verde", 
         categoria: "facial", 
         descripcion: "50 ml. Una increíble mascarilla purificante y de limpieza profunda que nos ayuda a eliminar y prevenir barritos, puntos negros e impurezas. Adicionalmente, nos ayuda a equilibrar el pH de nuestra piel de forma natural.",
@@ -219,9 +231,9 @@ const productosData = [
             { tamaño: "50 ml", precio: 12000, precioTexto: "$12.000" }
         ]
     },
-    // 18. Exfoliante de Baño
+    // 19. Exfoliante de Baño
     { 
-        id: 18, 
+        id: 19, 
         nombre: "Exfoliante de Baño", 
         categoria: "facial", 
         descripcion: "200 gr. Un exfoliante suave que elimina las células muertas de la piel y promueve la renovación celular. Rico en ingredientes naturales que hidratan y suavizan la piel, dejándola más clara y con un aspecto más saludable.",
@@ -231,9 +243,9 @@ const productosData = [
             { tamaño: "200 gr", precio: 14500, precioTexto: "$14.500" }
         ]
     },
-    // 19. Leche de coco crema corporal
+    // 20. Leche de coco crema corporal
     { 
-        id: 19, 
+        id: 20, 
         nombre: "Leche de coco crema corporal", 
         categoria: "corporal", 
         descripcion: "250 gr. Una crema corporal a base de aceite de coco, vitamina E y colágeno, que hidrata y nutre tu piel como no imaginas. Nos cercioramos de que tuviese una alta concentración de vitamina E y colágeno para que tu piel siempre permanezca joven, suave, tersa y profundamente nutrida, potenciada por las increíbles propiedades del aceite de coco.",
@@ -244,9 +256,9 @@ const productosData = [
         ]
     },
 
-    // 20. Tonico capilar (extracrecimiento)
+    // 21. Tonico capilar (extracrecimiento)
     { 
-        id: 20, 
+        id: 21, 
         nombre: "Tonico capilar (extracrecimiento)", 
         categoria: "capilar", 
         descripcion: "350 ml. Estimula un crecimiento acelerado en las fibras capilares, fortaleciendo, previniendo y tratando la caída del cabello, mientras elimina hongos y picores del cuero cabelludo.",
@@ -256,9 +268,9 @@ const productosData = [
             { tamaño: "350 ml", precio: 31000, precioTexto: "$31.000" }
         ]
     },
-    // 21. extracto de romero
+    // 22. extracto de romero
     { 
-        id: 21, 
+        id: 22, 
         nombre: "Extracto de Romero", 
         categoria: "capilar", 
         descripcion: "50 ml. Un extracto natural de romero que estimula el crecimiento del cabello y fortalece las raíces. Ideal para prevenir la caída y promover un cabello más saludable.",
@@ -269,9 +281,9 @@ const productosData = [
         ]
     },
 
-    // 22. extracto de cebolla
+    // 23. extracto de cebolla
     { 
-        id: 22, 
+        id: 23, 
         nombre: "Extracto de Cebolla", 
         categoria: "capilar", 
         descripcion: "50 ml. Un extracto natural de cebolla que estimula el crecimiento del cabello y fortalece las raíces. Ideal para prevenir la caída y promover un cabello más saludable.",
@@ -281,9 +293,9 @@ const productosData = [
             { tamaño: "50 ml", precio: 18000, precioTexto: "$18.000" }
         ]
     },
-    // 23. Chocolaterapia capilar
+    // 24. Chocolaterapia capilar
     { 
-        id: 23, 
+        id: 24, 
         nombre: "Chocolaterapia capilar", 
         categoria: "capilar", 
         descripcion: "250 gr. Una mascarilla concentrada, rica en vitaminas y minerales, que reúne todos los increíbles beneficios del extracto de cacao y el auténtico café colombiano en un solo producto.",
@@ -293,9 +305,9 @@ const productosData = [
             { tamaño: "250 gr", precio: 30000, precioTexto: "$30.000" }
         ]
     },
-    // 24. tratamiento de Restauracion
+    // 25. tratamiento de Restauracion
     { 
-        id: 24, 
+        id: 25, 
         nombre: "Tratamiento de Restauracion", 
         categoria: "capilar", 
         descripcion: "125 gr. Tratamiento capilar a base de extracto natural de aguacate y aceite de argán, libre de sal y sin parabenos. Es perfecto para cabellos dañados, ya que reestructura la fibra capilar y mejora las puntas abiertas, devolviéndole la salud, el brillo y la vida a tu cabello.",
@@ -305,9 +317,9 @@ const productosData = [
             { tamaño: "125 gr", precio: 15000, precioTexto: "$15.000" }
         ]
     },
-    // 25. Tratamiento de Crecimiento
+    // 26. Tratamiento de Crecimiento
     { 
-        id: 25, 
+        id: 26, 
         nombre: "Tratamiento de Crecimiento", 
         categoria: "capilar", 
         descripcion: "125 gr. Tratamiento capilar a base de extractos naturales de cebolla, romero y aceite de coco, formulado sin sal y sin parabenos. Es perfecto para todo tipo de cabello, especialmente para aquellos cabellos estancados, con caída y sin crecimiento.",
@@ -317,9 +329,9 @@ const productosData = [
             { tamaño: "125 gr", precio: 15000, precioTexto: "$15.000" }
         ]
     },
-    // 26. mantequilla capilar
+    // 27. mantequilla capilar
     { 
-        id: 26, 
+        id: 27, 
         nombre: "Mantequilla Capilar", 
         categoria: "capilar", 
         descripcion: "250 gr. Mantequilla capilar a base de aceite de argán y manteca de karité, ideal para hidratar y nutrir el cabello seco y dañado. Proporciona suavidad, brillo y facilidad de peinado. Sin parabenos ni sulfatos.",
