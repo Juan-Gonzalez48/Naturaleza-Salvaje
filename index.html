@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Naturaleza Salvaje | Jabberwock</title>
-    <!-- Cambia el href por el nombre real de tu imagen de logo -->
-    <link rel="icon" type="image/jpeg" href="foto2.jpg">
+    <link rel="icon" type="image/jpeg" href="foto2.jpg.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -66,28 +65,33 @@
     </div>
 </section>
 
-<!-- Nosotros -->
+<!-- Sección Nuestra esencia (texto + imagen) -->
 <section id="nosotros" class="about">
     <div class="container">
-        <div class="about-grid">
+        <!-- Fila con texto e imagen -->
+        <div class="about-row">
             <div class="about-text" data-aos="fade-right">
                 <h2>Nuestra esencia</h2>
                 <p>Creemos en la belleza desde lo natural y el poder que la naturaleza tiene sobre nuestras vidas. Por esta razón, aquí solo encontrarás productos para tu cuidado personal <strong>100% naturales</strong> y libres de preservantes, elaborados de manera artesanal con ingredientes puros. Libres de crueldad animal y químicos agresivos.</p>
-                <div class="signature">Naturaleza Salvaje</div>
+                <div class="signature">— Naturaleza Salvaje</div>
             </div>
-            <div class="about-stats" data-aos="fade-left">
-                <div class="stat">
-                    <div class="stat-number" id="yearsCount"></div>
-                    <div class="stat-label"></div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number" id="productsCount"></div>
-                    <div class="stat-label"></div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number" id="customersCount"></div>
-                    <div class="stat-label"></div>
-                </div>
+            <div class="about-image" data-aos="fade-left">
+                <img src="foto1.jpg.jpeg" alt="Naturaleza Salvaje - Cosmética Natural" class="about-img">
+            </div>
+        </div>
+        <!-- Fila con estadísticas (contadores) -->
+        <div class="about-stats" data-aos="fade-up">
+            <div class="stat">
+                <div class="stat-number" id="yearsCount">0</div>
+                <div class="stat-label">Años de experiencia</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="productsCount">0</div>
+                <div class="stat-label">Productos naturales</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="customersCount">0</div>
+                <div class="stat-label">Clientes felices</div>
             </div>
         </div>
     </div>
@@ -232,7 +236,7 @@
 
 <a href="https://wa.me/573214058442" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-<!-- Modal de opciones de producto (presentaciones) -->
+<!-- Modales -->
 <div id="optionsModal" class="modal">
     <div class="modal-content options-modal-content">
         <span class="modal-close" id="closeOptionsModal">&times;</span>
@@ -241,7 +245,6 @@
     </div>
 </div>
 
-<!-- Modal de producto (detalle) -->
 <div id="productModal" class="modal">
     <div class="modal-content">
         <span class="modal-close" id="closeModalBtn">&times;</span>
@@ -259,8 +262,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
