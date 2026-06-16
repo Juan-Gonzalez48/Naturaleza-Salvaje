@@ -1,4 +1,4 @@
-// ===================== CATÁLOGO COMPLETO DE NATURALEZA SALVAJE =====================
+// ===================== CATÁLOGO COMPLETO =====================
 const productosData = [
     { id: 1, nombre: "Aceite de Coco Extra Virgen", categoria: "corporal", descripcion: "Perfecto para fortalecer y dar vitalidad a las fibras capilares, estimula el crecimiento del cabello, repara puntas abiertas, es un excelente hidratante para tu piel y cabello, estimula la regeneración de la piel, te ayuda a desmaquillar incluso el maquillaje a prueba de agua sin maltratar tu rostro, es un aceite natural prensado en frío que le puedes dar tanto uso cosmético como culinario, excelente para freídos no profundos.", descCorta: "Multiusos: hidrata piel y cabello, desmaquilla, repara puntas.", imagen: "Fotos/AceiteCoco.jpg.jpeg", presentaciones: [{ tamaño: "125 gr", precio: 16000, precioTexto: "$16.000" }, { tamaño: "250 gr", precio: 26000, precioTexto: "$26.000" }, { tamaño: "500 gr", precio: 42000, precioTexto: "$42.000" }] },
     { id: 2, nombre: "Aceite de Argán Puro", categoria: "corporal", descripcion: "30 ml. Este maravilloso aceite es increíble para fortalecer y reparar tu cabello, tus cejas y lo mejor tus pestañas, gracias a todos sus ácidos grasos es realmente un reparador natural.", descCorta: "Repara cabello, cejas y pestañas. Antioxidante.", imagen: "Fotos/AceiteArgan.jpg.jpeg", presentaciones: [{ tamaño: "30 ml", precio: 16000, precioTexto: "$16.000" }] },
@@ -15,7 +15,7 @@ const productosData = [
     { id: 13, nombre: "Jabón Facial de Arroz y Colágeno", categoria: "facial", descripcion: "60 gr. Un jabón facial a base de arroz y colágeno, que hidrata y nutre tu piel.", descCorta: "Nutrición, suavidad, brillo natural.", imagen: "Fotos/JabonArroz.jpg.jpeg", presentaciones: [{ tamaño: "60 gr", precio: 7000, precioTexto: "$7.000" }] },
     { id: 14, nombre: "Exfoliante Labial", categoria: "labios-cejas", descripcion: "20 gr. Estimula la regeneración celular en la piel de nuestros labios, los mantiene suaves, humectados y aporta volumen natural.", descCorta: "Labios suaves, elimina cueritos, volumen natural.", imagen: "Fotos/ExfolianteLabial.jpg.jpeg", presentaciones: [{ tamaño: "20 gr", precio: 8000, precioTexto: "$8.000" }] },
     { id: 15, nombre: "Bálsamo Labial", categoria: "labios-cejas", descripcion: "20 gr. Un bálsamo labial hidratante que suaviza y protege los labios secos y agrietados. Rico en ingredientes naturales que nutren profundamente.", descCorta: "Hidratación intensa, brillo natural, protección.", imagen: "Fotos/BalsamoLabial.jpeg", presentaciones: [{ tamaño: "20 gr", precio: 7000, precioTexto: "$7.000" }] },
-    { id: 16, nombre: "Bálsamo Labial Chapstick", categoria: "labios-cejas", descripcion: "Bálsamo labial en formato chapstick que proporciona hidratación intensa y protección duradera.", descCorta: "Hidratación intensa, protección duradera, formato práctico.", imagen: "Fotos/BalsamoLabial Chapstick.jpg.jpeg", presentaciones: [{ tamaño: "20 gr", precio: 7000, precioTexto: "$7.000" }] },
+    { id: 16, nombre: "Bálsamo Labial Chapstick", categoria: "labios-cejas", descripcion: "Bálsamo labial en formato chapstick que proporciona hidratación intensa y protección duradera.", descCorta: "Hidratación intensa, protección duradera, formato práctico.", imagen: "Fotos/BalsamoLabialChapstick.jpg.jpeg", presentaciones: [{ tamaño: "20 gr", precio: 7000, precioTexto: "$7.000" }] },
     { id: 17, nombre: "Bálsamo de Cejas y Pestañas", categoria: "labios-cejas", descripcion: "Bálsamo para cejas y pestañas que nutre y protege, mejorando su apariencia y salud.", descCorta: "Nutrición intensa, fortalece, mejora apariencia.", imagen: "Fotos/BalsamoCejas-pestañas.jpg.jpeg", presentaciones: [{ tamaño: "20 gr", precio: 8000, precioTexto: "$8.000" }] },
     { id: 18, nombre: "Sérum de Pestañas", categoria: "labios-cejas", descripcion: "10 ml. Un serum específico para pestañas que fortalece, estimula el crecimiento y mejora la apariencia.", descCorta: "Fortalece, estimula crecimiento, mejora apariencia.", imagen: "Fotos/Pestañas.jpg.jpeg", presentaciones: [{ tamaño: "10 ml", precio: 21000, precioTexto: "$21.000" }] },
     { id: 19, nombre: "Arcilla Detox con Té Verde", categoria: "facial", descripcion: "50 ml. Mascarilla purificante y de limpieza profunda que ayuda a eliminar y prevenir barritos, puntos negros e impurezas.", descCorta: "Purifica, elimina impurezas, equilibra el pH.", imagen: "Fotos/ArcillaTeVerde.jpg.jpeg", presentaciones: [{ tamaño: "50 ml", precio: 12000, precioTexto: "$12.000" }] },
@@ -299,6 +299,8 @@ function initMobileMenu() {
 }
 
 function initSmoothScroll() {
+    const toggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("mainNav");
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function(e) {
             const targetId = this.getAttribute("href");
@@ -307,11 +309,13 @@ function initSmoothScroll() {
             if (target) {
                 e.preventDefault();
                 target.scrollIntoView({ behavior: "smooth" });
-                if (nav.classList.contains("header__nav--open")) {
+                if (nav && nav.classList.contains("header__nav--open")) {
                     nav.classList.remove("header__nav--open");
-                    const icon = toggle.querySelector("i");
-                    icon.classList.remove("fa-times");
-                    icon.classList.add("fa-bars");
+                    if (toggle) {
+                        const icon = toggle.querySelector("i");
+                        icon.classList.remove("fa-times");
+                        icon.classList.add("fa-bars");
+                    }
                 }
             }
         });
