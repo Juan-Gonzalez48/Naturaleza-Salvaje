@@ -15,7 +15,7 @@ const productosData = [
     { id: 13, nombre: "Jabón Facial de Arroz y Colágeno", categoria: "facial", descripcion: "60 gr. Un jabón facial a base de arroz y colágeno, que hidrata y nutre tu piel.", descCorta: "Nutrición, suavidad, brillo natural.", imagen: "Fotos/JabonArroz.jpg.jpeg", presentaciones: [{ tamaño: "60 gr", precio: 7000, precioTexto: "$7.000" }] },
     { id: 14, nombre: "Exfoliante Labial", categoria: "labios-cejas", descripcion: "20 gr. Estimula la regeneración celular en la piel de nuestros labios, los mantiene suaves, humectados y aporta volumen natural.", descCorta: "Labios suaves, elimina cueritos, volumen natural.", imagen: "Fotos/ExfolianteLabial.jpg.jpeg", presentaciones: [{ tamaño: "20 gr", precio: 8000, precioTexto: "$8.000" }] },
     { id: 15, nombre: "Bálsamo Labial", categoria: "labios-cejas", descripcion: "20 gr. Un bálsamo labial hidratante que suaviza y protege los labios secos y agrietados. Rico en ingredientes naturales que nutren profundamente.", descCorta: "Hidratación intensa, brillo natural, protección.", imagen: "Fotos/BalsamoLabial.jpeg", presentaciones: [{ tamaño: "20 gr", precio: 7000, precioTexto: "$7.000" }] },
-    { id: 16, nombre: "Bálsamo Labial Chapstick", categoria: "labios-cejas", descripcion: "Bálsamo labial en formato chapstick que proporciona hidratación intensa y protección duradera.", descCorta: "Hidratación intensa, protección duradera, formato práctico.", imagen: "Fotos/BalsamoLabialChapstick.jpg.jpeg", presentaciones: [{ tamaño: "20 gr", precio: 7000, precioTexto: "$7.000" }] },
+    { id: 16, nombre: "Bálsamo Labial Chapstick", categoria: "labios-cejas", descripcion: "Bálsamo labial en formato chapstick que proporciona hidratación intensa y protección duradera.", descCorta: "Hidratación intensa, protección duradera, formato práctico.", imagen: "Fotos/BalsamoLabial Chapstick.jpg.jpeg", presentaciones: [{ tamaño: "20 gr", precio: 7000, precioTexto: "$7.000" }] },
     { id: 17, nombre: "Bálsamo de Cejas y Pestañas", categoria: "labios-cejas", descripcion: "Bálsamo para cejas y pestañas que nutre y protege, mejorando su apariencia y salud.", descCorta: "Nutrición intensa, fortalece, mejora apariencia.", imagen: "Fotos/BalsamoCejas-pestañas.jpg.jpeg", presentaciones: [{ tamaño: "20 gr", precio: 8000, precioTexto: "$8.000" }] },
     { id: 18, nombre: "Sérum de Pestañas", categoria: "labios-cejas", descripcion: "10 ml. Un serum específico para pestañas que fortalece, estimula el crecimiento y mejora la apariencia.", descCorta: "Fortalece, estimula crecimiento, mejora apariencia.", imagen: "Fotos/Pestañas.jpg.jpeg", presentaciones: [{ tamaño: "10 ml", precio: 21000, precioTexto: "$21.000" }] },
     { id: 19, nombre: "Arcilla Detox con Té Verde", categoria: "facial", descripcion: "50 ml. Mascarilla purificante y de limpieza profunda que ayuda a eliminar y prevenir barritos, puntos negros e impurezas.", descCorta: "Purifica, elimina impurezas, equilibra el pH.", imagen: "Fotos/ArcillaTeVerde.jpg.jpeg", presentaciones: [{ tamaño: "50 ml", precio: 12000, precioTexto: "$12.000" }] },
@@ -260,9 +260,6 @@ function initCounters() {
         const labelSpan = parent.querySelector(".stat__label");
         if (labelSpan) labelSpan.innerText = label;
     };
-    animate(document.getElementById("yearsCount"), 8, "Años de experiencia");
-    animate(document.getElementById("productsCount"), 32, "Productos naturales");
-    animate(document.getElementById("customersCount"), 1250, "Clientes felices");
 }
 
 // ===================== INICIALIZACIONES =====================
